@@ -5,7 +5,7 @@ ZONE_ID="Z05260162XS3U1UPP64CC"
 DOMAIN="saraldevops.online"
 SG_NAME="allow-all"
 #############################
-
+      
 
 
 create_ec2() {
