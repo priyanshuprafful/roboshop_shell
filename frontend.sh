@@ -19,7 +19,7 @@ echo -e "\e[35mEnabling Nginx\e[0m"
 systemctl enable nginx
 
 echo -e "\e[35mStarting Nginx\e[0m"
-systemctl restart nginx # because we mighnt modify the configurations
+systemctl restart nginx # because we might modify the configurations
 
-# Roboshop Configs is not copied # now it is copied
+# Roboshop Configs is not copied # now it is copied # now we have copied and solved our issue
 # If any command is a errored or failed , we need to stop the script there itself
