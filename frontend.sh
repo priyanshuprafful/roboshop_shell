@@ -1,10 +1,4 @@
-code_dir=$(pwd)
-log_file=/tmp/roboshop.log # automatically the location and file will created here
-rm -f ${log_file}
-
-print_head() {
-  echo -e "\e[35m${1}\e[0m"
-}
+source common.sh
 
 print_head "Installing Nginx"
 yum install nginx -y &>>${log_file}
@@ -29,3 +23,4 @@ systemctl restart nginx &>>${log_file} # because we might modify the configurati
 
 # Roboshop Configs is not copied # now it is copied # now we have copied and solved our issue
 # If any command is a errored or failed , we need to stop the script there itself
+#Status of command need to be printed
