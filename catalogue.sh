@@ -23,10 +23,10 @@ cd /app
 print_head "Extracting App Content"
 unzip /tmp/catalogue.zip &>>${log_file}
 
-print_head"Installing NodeJS dependencies"
+print_head "Installing NodeJS dependencies"
 npm install &>>${log_file}
 
-print_head"Copy SystemD service files"
+print_head "Copy SystemD service files"
 cp ${code_dir}/configs/catalogue.service /etc/systemd/system/catalogue.service &>>${log_file}
 
 print_head "Reload SystemD"
