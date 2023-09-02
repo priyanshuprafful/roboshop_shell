@@ -1,7 +1,7 @@
 source common.sh
 
 print_head "Installing Nginx"
-yum install nginx -y &>>${log_file}
+yum install nginxx -y &>>${log_file}
 status_check $? # here this $? value will go to the function and status check will use that value
 
 print_head "Removing Old Content"
