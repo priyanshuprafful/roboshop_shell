@@ -16,7 +16,7 @@ fi
 status_check $?
 
 print_head "Create Application Directory"
-if [ !d /app ]; then # here ! will inverse the logic also mkdir has options for all this well
+if [ ! d/app ]; then # here ! will inverse the logic also mkdir has options for all this well
   mkdir /app &>>${log_file}
 fi
 status_check $?
