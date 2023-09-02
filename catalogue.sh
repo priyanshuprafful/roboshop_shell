@@ -16,7 +16,7 @@ fi
 status_check $?
 
 print_head "Create Application Directory"
-if [ ! d /app ]; then
+if [ ! d /app ]; then # here ! will inverse the logic also mkdir has options for all this well
   mkdir /app &>>${log_file}
 fi
 status_check $?
@@ -56,7 +56,7 @@ systemctl restart catalogue &>>${log_file} # restart so that any change it will 
 status_check $?
 
 print_head "Copy MongoDB repo files"
-cp ${code_dir}/configs mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
+cp ${code_dir}/configs mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
 status_check $?
 
 print_head "Install Mongo Client"
