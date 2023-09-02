@@ -15,4 +15,5 @@ systemctl enable mongod &>>${log_file}
 print_head "Start MongoDB Service"
 systemctl restart mongod &>>${log_file}
 
-# update /etc/mongod.conf from 127.0.0.1 to 0.0.0.0 , this task is pending
+# update /etc/mongod.conf from 127.0.0.1 to 0.0.0.0 , this task is pending , we have completed the same
+# using sed editor
