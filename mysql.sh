@@ -1,7 +1,7 @@
 source common.sh
 mysql_root_password=$1
 if [ -z "${my_sql_password}" ]; then
-  echo "\e[31mMissing Mysql root password argument\e[0m"
+  echo -e "\e[31mMissing Mysql root password argument\e[0m"
   exit 1
 fi
 
