@@ -7,7 +7,7 @@ print_head() {
 }
 
 status_check() {
-  if [ echo $1 -eq 0 ] ; then # $1 is the first argument whoich will hold exit status $? value we give whie we use the function
+  if [ $1 -eq 0 ] ; then # $1 is the first argument whoich will hold exit status $? value we give whie we use the function
     echo "Success"
   else
     echo "Failure"
