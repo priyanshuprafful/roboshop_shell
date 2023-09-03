@@ -96,12 +96,13 @@ nodejs() {
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log_file}
   status_check $?
 
-  app_prereq_setup
+
 
   print_head "Install NodeJS"
   yum install nodejs -y &>>${log_file}
   status_check $?
 
+  app_prereq_setup
 
 
   print_head "Installing NodeJS dependencies"
