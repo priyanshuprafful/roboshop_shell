@@ -162,7 +162,7 @@ golang() {
 
   app_prereq_setup
 
-  print_head"Installing GoLang Dependencies"
+  print_head "Installing GoLang Dependencies"
   cd /app &>>${log_file}
   go mod init dispatch &>>${log_file}
   status_check $?
