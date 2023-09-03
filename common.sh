@@ -21,6 +21,9 @@ systemd_setup() {
     cp ${code_dir}/configs/${component}.service /etc/systemd/system/${component}.service &>>${log_file}
     status_check $?
 
+    sed -i -e "s/GIVE_ROBOSHOP_USER_PASSWORD/${roboshop_app_password}/" /etc/systemd/system/${component}.service &>>${log_file}
+    # the above was just for payment service and not for other services
+    # and we are using double quotes so that we can access the variable ,
     print_head "Reload SystemD"
     systemctl daemon-reload &>>${log_file}
     status_check $?
@@ -132,6 +135,25 @@ java() {
 
   # SystemD Function
   systemd_setup
+
+
+}
+
+python() {
+  print_head "Install Python"
+  yum install python36 gcc python3-devel -y &>>${log_file}
+  status_check $?
+
+  app_prereq_setup
+
+  print_head "Download Dependencies"
+  pip3.6 install -r requirements.txt &>>${log_file}
+  status_check $?
+
+
+  systemd_setup
+
+
 
 
 }
