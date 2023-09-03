@@ -8,5 +8,5 @@ fi
 
 
 component=shipping
-scheme_type="mysql"
+schema_type="mysql"
 java
