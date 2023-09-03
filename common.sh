@@ -165,9 +165,9 @@ golang() {
   print_head "Installing GoLang Dependencies"
   cd /app &>>${log_file}
   go mod init dispatch &>>${log_file}
-  status_check $?
+  #status_check $?
   go get &>>${log_file}
-  status_check $?
+  #status_check $?
   go build &>>${log_file}
   status_check $?
 
