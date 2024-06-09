@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ##### Change these values ###
-ZONE_ID="Z05260162XS3U1UPP64CC"
-DOMAIN="saraldevops.online"
+ZONE_ID="Z07013421USQO5ED15QGP" //  "Z05260162XS3U1UPP64CC"
+DOMAIN="saraldevops.site"
 SG_NAME="allow-all"
 #############################
       

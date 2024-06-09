@@ -50,7 +50,7 @@ schema_setup() {
     status_check $?
 
     print_head "Load Schema"
-    mongo --host mongodb-dev.saraldevops.online </app/schema/${component}.js &>>${log_file}
+    mongo --host mongodb-dev.saraldevops.site </app/schema/${component}.js &>>${log_file}
     status_check $?
 
   elif [ "${schema_type}" == "mysql" ]; then
@@ -59,7 +59,7 @@ schema_setup() {
     status_check $?
 
     print_head "Load Schema"
-    mysql -h mysql-dev.saraldevops.online -uroot -p${mysql_root_password} < /app/schema/shipping.sql &>>${log_file}
+    mysql -h mysql-dev.saraldevops.site -uroot -p${mysql_root_password} < /app/schema/shipping.sql &>>${log_file}
     status_check $?
   fi
 }
